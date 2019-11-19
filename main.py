@@ -10,7 +10,8 @@ def main():
     server.init()
     server.commands = { 
         'getdist':   core.get_dist(),
-        'getmotors': core.get_motors()
+        'getmotors': core.get_motors(),
+        'start':     core.set_state('start')
     }
     
     # init controller
