@@ -1,8 +1,13 @@
+from pibot import motor
+from pibot import ultrasound 
+
 class this:
     state = "stop"
 
 
 def init():
+    motor.GPIO_motor_setup()
+    ultrasound.GPIO_ultrasound_setup()
     print("Pibot has been initialized.")
 
 
@@ -25,9 +30,10 @@ def set_state(state):
 
 
 def get_dist():
+    return ultrasound.measurement()
 
-    return 69
-
+def set_dir(dir):
+    motor.set_dir(dir)
 
 def get_motors():
     return "Left motor: " + str(420) + "Right motor: " + str(6969)
