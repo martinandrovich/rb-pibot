@@ -4,8 +4,7 @@ from pibot import core
 
 
 def run():
-    """Main function running."""
-
+    """Complete the program."""
     # init server + commands table
     server_ = server.Server()
     server_.commands = {
