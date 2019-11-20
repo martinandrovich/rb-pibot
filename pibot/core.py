@@ -1,4 +1,5 @@
 class this:
+    """Global variables."""
     state = "stop"
 
 
@@ -11,13 +12,52 @@ def operate():
     if this.state == "stop":
         return
 
-    print("Hello World!")
+    ctrl_threshold()
+
+
+def ctrl_simple():
+
+    dist = get_dist()
+    dir = "right"
+
+    if dist > 10:
+        dir = "right"
+
+    else:
+        dir = "left"
+
+    # call daniel's methods
+
+    msg = f"Distance: {dist} cm | Direction: {dir}"
+    print(msg)
+
+def ctrl_threshold():
+
+    dist = get_dist()
+    dir = "forward"
+
+    DIST_TH = 10
+    DIST_TO_WALL = 20
+
+    if dist > DIST_TO_WALL + DIST_TH:
+        dir = "right"
+
+    elif dist < DIST_TO_WALL - DIST_TH:
+        dir = "left"
+
+    else:
+        dir = "forward"
+
+    # call daniel's methods
+
+    msg = f"Distance: {dist} cm | Direction: {dir}"
+    print(msg)
 
 
 def set_state(state):
 
     if state not in("start", "stop"):
-        return "Canno set state; invalid argument."
+        return "Cannot set state; invalid argument."
 
     else:
         this.state = state
