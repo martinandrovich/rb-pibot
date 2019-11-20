@@ -1,26 +1,27 @@
-# import server
+"""Application code."""
+from pibot import server
 from pibot import core
 
+
 def run():
+    """Main function running."""
 
-	# hello
-	print("Hello World!")
+    # init server + commands table
+    server_ = server.Server()
+    server_.commands = {
+        b'getdist': core.get_dist(),
+        b'getmotors': core.get_motors(),
+        b'start': core.set_state('start')
+    }
 
-	# init server + commands table
-	# server.init()
-	# server.commands = { 
-	# 	'getdist':   core.get_dist(),
-	# 	'getmotors': core.get_motors(),
-	# 	'start':	 core.set_state('start')
-	# }
+    # init controller
+    core.init()
 
-	# init controller
-	core.init()
+    # main loop
+    while True:
+        server_.operate()
+        core.operate()
 
-	# main loop
-	while True:
-		# server.operate()
-		core.operate()
 
 if __name__ == '__main__':
-	run()
+    run()
