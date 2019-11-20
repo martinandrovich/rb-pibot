@@ -17,7 +17,7 @@ pwmMotorBForwards = None
 pwmMotorBBackwards = None
 
 # GPIO setup
-def GPIO_motor_setup():
+def setup():
 
     global pwmMotorAForwards, pwmMotorABackwards, pwmMotorBForwards, pwmMotorBBackwards
     
@@ -55,6 +55,12 @@ def stopmotors():
 
 # Turn both motors forwards
 def forward(A, B):
+
+    global DutyCycleA, DutyCycleB
+
+    DutyCycleA = A
+    DutyCycleB = B
+
     pwmMotorAForwards.ChangeDutyCycle(A)
     pwmMotorABackwards.ChangeDutyCycle(Stop)
     pwmMotorBForwards.ChangeDutyCycle(B)
@@ -68,7 +74,7 @@ def backward():
     pwmMotorBBackwards.ChangeDutyCycle(DutyCycleB)
 
 # Turn left
-def left():
+def right():
     pwmMotorAForwards.ChangeDutyCycle(Stop)
     pwmMotorABackwards.ChangeDutyCycle(DutyCycleA)
     pwmMotorBForwards.ChangeDutyCycle(DutyCycleB)
@@ -76,7 +82,7 @@ def left():
 
                                                                                 
 # Turn Right
-def right():
+def left():
     pwmMotorAForwards.ChangeDutyCycle(DutyCycleA)
     pwmMotorABackwards.ChangeDutyCycle(Stop)
     pwmMotorBForwards.ChangeDutyCycle(Stop)
@@ -84,30 +90,30 @@ def right():
 
 def set_dir(direction):
     if direction == "left":
-        forward(40,50)
+        forward(40,20)
     elif direction == "right":
-        forward(50,40)
+        forward(20,40)
     else:
-        forward(50,50)
+        forward(30,30)
 
 # Clean Up
 def clean_up_motor():
     GPIO.cleanup()
 
-GPIO_motor_setup()
+#GPIO_motor_setup()
 
-set_dir("right")
+#set_dir("right")
 
-time.sleep(5)
+#time.sleep(5)
 
-set_dir("left")
+#set_dir("left")
 
-time.sleep(5)
+#time.sleep(5)
 
-set_dir("forward")
+#set_dir("forward")
 
-time.sleep(5)
+#time.sleep(5)
 
-stopmotors()
+#stopmotors()
 
-clean_up_motor()
+#clean_up_motor()

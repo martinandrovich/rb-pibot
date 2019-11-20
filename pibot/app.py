@@ -6,7 +6,7 @@ from pibot import core
 def run():
     
     # init server + commands table
-    server_ = server.Server()
+    server_ = server.Server("10.126.14.58")
     server_.cmds = {
         b'getdist': core.get_dist,
         b'getmotors': core.get_motors,

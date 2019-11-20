@@ -4,7 +4,7 @@
 import RPi.GPIO as GPIO
 import time
 
-def GPIO_setup_ultrasound():
+def setup():
     pinTrigger = 17
     pinEcho = 18
 
