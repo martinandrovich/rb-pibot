@@ -1,9 +1,10 @@
+#!/usr/bin/env python3
+
 from pibot import server
 from pibot import core
 
-
 def run():
-    """Complete the program."""
+    
     # init server + commands table
     server_ = server.Server()
     server_.cmds = {
