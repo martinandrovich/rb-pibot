@@ -1,11 +1,10 @@
-"""Core functions."""
-import sys
-this = sys.modules[__name__]
-this.state = "stop"
+class this:
+    state = "stop"
 
 
 def init():
     print("Pibot has been initialized.")
+
 
 def operate():
 
@@ -14,16 +13,21 @@ def operate():
 
     print("Hello World!")
 
+
 def set_state(state):
-    """Set global state."""
+
     if state not in("start", "stop"):
-        return "failure matrinio"
+        return "Canno set state; invalid argument."
+
     else:
         this.state = state
         return "State set to: " + state
 
+
 def get_dist():
+
     return 69
+
 
 def get_motors():
     return "Left motor: " + str(420) + "Right motor: " + str(6969)

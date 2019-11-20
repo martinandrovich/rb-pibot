@@ -1,4 +1,3 @@
-"""Application code."""
 from pibot import server
 from pibot import core
 
