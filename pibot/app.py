@@ -7,10 +7,11 @@ def run():
     """Complete the program."""
     # init server + commands table
     server_ = server.Server()
-    server_.commands = {
-        b'getdist': core.get_dist(),
-        b'getmotors': core.get_motors(),
-        b'start': core.set_state('start')
+    server_.cmds = {
+        b'getdist': core.get_dist,
+        b'getmotors': core.get_motors,
+        b'start': lambda: core.set_state('start'),
+        b'stop': lambda: core.set_state('stop')
     }
 
     # init controller

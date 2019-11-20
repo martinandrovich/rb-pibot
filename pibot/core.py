@@ -16,9 +16,8 @@ def operate():
 
 def set_state(state):
     """Set global state."""
-    if state != ("start" or "stop"):
-        return print("Cannot set state, invalid argument.")
-
+    if state not in("start", "stop"):
+        return "failure matrinio"
     else:
         this.state = state
         return "State set to: " + state
