@@ -20,6 +20,12 @@ This following installations are necessary on the Pi; further dependencies are h
 
 * [OpenCV 3.2](https://opencv.org/) - used for computer vision
 
+The following commands are to be run:
+
+```bash
+sudo apt install python3-rpi.gpio
+```
+
 ### Installing
 
 A guide on how to setup the Pi and port the code onto it.
