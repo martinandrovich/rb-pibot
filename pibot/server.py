@@ -2,26 +2,6 @@
 import socket
 
 
-# def start():
-#     print("start has been called")
-#     return 'start OK'
-# 
-# 
-# def stop():
-#     print("stop has been called")
-#     return 'stop OK'
-# 
-# 
-# def getdist():
-#     print("getdist has been called")
-#     return 20
-# 
-# 
-# def getmotors():
-#     print("getmotors has been called")
-#     return "Left = 20, Right = 50"
-
-
 class Server:
     """Server socket."""
 
@@ -74,18 +54,3 @@ class Server:
             return self.cmds[cmd]()
         else:
             return "Cant parse cmd"
-
-
-
-# server = Server()
-# server.cmds = {
-#     b'start': start,
-#     b'stop': stop,
-#     b'getdist': getdist,
-#     b'getmotors': getmotors}
-# 
-# loop = 0
-# while True:
-#     server.operate()
-#     print("Loop count is:", loop)
-#     loop += 1

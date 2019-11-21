@@ -1,5 +1,10 @@
+"""Controller module."""
+
+import time
+
 from pibot import motor
-from pibot import ultrasound 
+from pibot import ultrasound
+
 
 class this:
     """Global variables."""
@@ -7,8 +12,10 @@ class this:
 
 
 def init():
+
     motor.setup()
     ultrasound.setup()
+
     print("Pibot has been initialized.")
 
 
@@ -18,52 +25,52 @@ def operate():
         motor.stopmotors()
         return
 
-    ctrl_threshold()
+    controller()
 
 
-def ctrl_simple():
-
-    dist = get_dist()
-    dir = "right"
-
-    if dist > 10:
-        dir = "right"
-
-    else:
-        dir = "left"
-
-    # call daniel's methods
-
-    #msg = f"Distance: {dist} cm | Direction: {dir}"
-    #print(msg)
-
-def ctrl_threshold():
+def controller():
 
     dist = get_dist()
     dir = "forward"
 
-    DIST_TH = 50
+    DIST_TH = 15
     DIST_TO_WALL = 70
 
-    if dist > DIST_TO_WALL + 15:
+    if dist > DIST_TO_WALL + DIST_TH:
         dir = "left"
 
-    elif dist < DIST_TO_WALL - 15:
+    elif dist < DIST_TO_WALL - DIST_TH:
         dir = "right"
 
     else:
         dir = "forward"
-    
-    motor.set_dir(dir)
-    print(dir)
 
-    #msg = f"Distance: {dist} cm | Direction: {dir}"
-    #print(msg)
+    motor.set_dir(dir)
+    print("Distance: " + str(dist) + " cm | Direction: " + str(dir))
+
+
+def test():
+
+    print("Performing controller test.")
+
+    print("forward")
+    motor.set_dir("forward")
+    time.sleep(1)
+
+    print("left")
+    motor.set_dir("left")
+    time.sleep(1)
+
+    print("right")
+    motor.set_dir("right")
+    time.sleep(1)
+
+    return "Controller test OK"
 
 
 def set_state(state):
 
-    if state not in("start", "stop"):
+    if state not in ("start", "stop"):
         return "Cannot set state; invalid argument."
 
     else:
@@ -72,7 +79,10 @@ def set_state(state):
 
 
 def get_dist():
+
     return ultrasound.measurement()
 
+
 def get_motors():
-    return "Left motor: " + str(motor.DutyCycleA) + "Right motor: " + str(motor.DutyCycleB)
+
+    return "Left: " + str(motor.DutyCycleA) + "Right " + str(motor.DutyCycleB)
