@@ -2,6 +2,8 @@
 
 The objective og this project is to build a robot that can follow a wall autonomously as reliably and quickly as possible. The robot should accept start and stop commands via an ad-hoc wireless network. It should also support requests for sensor and control parameters.
 
+![CamJam EduKit 3 - Robotics](http://camjam.me/wp-content/uploads/2015/09/Edukit3_1500-Alex-Eames-sm.jpg
+
 This project is developed in Bash and Python, built using the CamJam EduKit 3 on a Raspberry Pi Zero, interfaced using `ssh` from a Linux console.
 
 The Pi is assigned the IP `192.168.99.<group number>` and should be able to join the ad-hoc network `pibot`. It has a TCP server running at port `:8080`, which accepts various [commands](doc/COMMANDS.md).
