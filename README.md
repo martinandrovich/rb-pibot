@@ -12,7 +12,7 @@ The Pi is assigned the IP `192.168.99.<group number>` and should be able to join
 
 These instructions will get you a copy of the project up and running on your Raspberry Pi with the camJam EduKit 3 for development and testing purposes.
 
-The controller is running on Rasbian Stretch Lite (2019-04-08) with Python 3.5 (installed per default). The robot is assembled as instructed by the EduKit guide, with the ultrasound sensor being mounted on and pointing towards the left side.
+The controller is running on [Rasbian Stretch Lite (2019-04-08)][1] with Python 3.5 (installed per default). The robot is assembled as instructed by the [EduKit guide][2], with the ultrasound sensor being mounted on and pointing towards the left side.
 
 The only external dependency is the `rpi.GPIO` package for Python 3, which can be installed via the command:
 
@@ -34,10 +34,6 @@ printf start | socat - tcp:localhost:8080
 
 In order to communicate with the robot wirelessly, SSH must be enabled on the Raspberry Pi. It is then possible to configure the Pi to connect to an ad-hoc network or simply communicate with it using SSH over the WiFi. The IP address of the Pi's server must be configured accordingly.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [releases on this repository](https://github.com/martinandrovich/rb-pro5/releases). Furthermore, this [changelog](https://github.com/martinandrovich/rb-pro5/blob/master/CHANGELOG.md) documents the most relevant changes.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
@@ -46,3 +42,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 Thanks to the supervisor [Tórur Andreassen](https://portal.findresearcher.sdu.dk/da/persons/thor-andreassen) of the LEO course at Southern University of Danmark.
 
+[1]: http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-04-09/2019-04-08-raspbian-stretch-lite.zip
+[2]: https://github.com/CamJam-EduKit/EduKit3/blob/master/CamJam Edukit 3 - RPi.GPIO/CamJam EduKit 3 - Robotics Worksheet 2 (RPi.GPIO) - Building a Robot.pdf
