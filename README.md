@@ -34,6 +34,20 @@ printf start | socat - tcp:localhost:8080
 
 In order to communicate with the robot wirelessly, SSH must be enabled on the Raspberry Pi. It is then possible to configure the Pi to connect to an ad-hoc network or simply communicate with it using SSH over the WiFi. The IP address of the Pi's server must be configured accordingly.
 
+## Extras
+
+### IP gist posting script
+
+Text.
+
+### Autonomous setup
+
+Text.
+
+### Test command
+
+Text.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
@@ -43,4 +57,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 Thanks to the supervisor [Tórur Andreassen](https://portal.findresearcher.sdu.dk/da/persons/thor-andreassen) of the LEO course at Southern University of Danmark.
 
 [1]: http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-04-09/2019-04-08-raspbian-stretch-lite.zip
-[2]: https://github.com/CamJam-EduKit/EduKit3/blob/master/CamJam Edukit 3 - RPi.GPIO/CamJam EduKit 3 - Robotics Worksheet 2 (RPi.GPIO) - Building a Robot.pdf
+[2]: www.github.com/CamJam-EduKit/EduKit3/blob/master/CamJam%20Edukit%203%20-%20RPi.GPIO/CamJam%20EduKit%203%20-%20Robotics%20Worksheet%202%20%28RPi.GPIO%29%20-%20Building%20a%20Robot.pdf
