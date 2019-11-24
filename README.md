@@ -44,6 +44,10 @@ Text.
 
 Text.
 
+### Authentication (basic)
+
+Text.
+
 ### Test command
 
 Text.
