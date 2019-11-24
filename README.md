@@ -57,4 +57,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 Thanks to the supervisor [Tórur Andreassen](https://portal.findresearcher.sdu.dk/da/persons/thor-andreassen) of the LEO course at Southern University of Danmark.
 
 [1]: http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-04-09/2019-04-08-raspbian-stretch-lite.zip
-[2]: www.github.com/CamJam-EduKit/EduKit3/blob/master/CamJam%20Edukit%203%20-%20RPi.GPIO/CamJam%20EduKit%203%20-%20Robotics%20Worksheet%202%20%28RPi.GPIO%29%20-%20Building%20a%20Robot.pdf
+[2]: http://www.github.com/CamJam-EduKit/EduKit3/blob/master/CamJam%20Edukit%203%20-%20RPi.GPIO/CamJam%20EduKit%203%20-%20Robotics%20Worksheet%202%20%28RPi.GPIO%29%20-%20Building%20a%20Robot.pdf
