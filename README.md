@@ -38,19 +38,23 @@ In order to communicate with the robot wirelessly, SSH must be enabled on the Ra
 
 ### IP gist posting script
 
-Text.
+The file `scripts/ip-gist-post.py` can be used to automatically post the IP address of Raspberry PI to a Github Gist, allowing to SSH into the Pi when it is connected to `eduroam`.
 
-### Autonomous setup
+### Ad-hoc network
 
-Text.
+In order to connect to the ad-hoc network, the file `/etc/network/interfaces` must be modified to the following:
 
-### Authentication (basic)
+```bash
+auto wlan0
+iface wlan0 inet static
+    address 192.168.99.5
+    netmask 255.255.255.0
+    wireless-channel 1
+    wireless-essid pibot
+    wireless-mode ad-hoc
+```
 
-Text.
-
-### Test command
-
-Text.
+This removes the internet capabilities of the Pi and accessing the SSH must now be done via the ad-hoc network.
 
 ## License
 
