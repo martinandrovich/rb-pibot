@@ -38,7 +38,7 @@ In order to communicate with the robot wirelessly, SSH must be enabled on the Ra
 
 ### IP gist posting script
 
-The file `scripts/gist-ip-post.py` can be used to automatically post the IP address of Raspberry PI to a specified Github Gist, specifying the IP address used to SSH into the Pi when it is connected to `eduroam`.
+The file `scripts/gist-ip-post.py` can be used to automatically post the IP address of Raspberry PI to a specified [Github Gist][3], specifying the IP address used to SSH into the Pi when it is connected to `eduroam`.
 
 ### Ad-hoc network
 
@@ -66,3 +66,4 @@ Thanks to the supervisor [Tórur Andreassen](https://portal.findresearcher.sdu.d
 
 [1]: http://downloads.raspberrypi.org/raspbian_lite/images/raspbian_lite-2019-04-09/2019-04-08-raspbian-stretch-lite.zip
 [2]: http://www.github.com/CamJam-EduKit/EduKit3/blob/master/CamJam%20Edukit%203%20-%20RPi.GPIO/CamJam%20EduKit%203%20-%20Robotics%20Worksheet%202%20%28RPi.GPIO%29%20-%20Building%20a%20Robot.pdf
+[3]: https://gist.github.com/martinandrovich/1d2605660e4f297205c4f94c2c7266d5
