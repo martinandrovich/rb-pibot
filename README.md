@@ -38,7 +38,7 @@ In order to communicate with the robot wirelessly, SSH must be enabled on the Ra
 
 ### IP gist posting script
 
-The file `scripts/ip-gist-post.py` can be used to automatically post the IP address of Raspberry PI to a Github Gist, allowing to SSH into the Pi when it is connected to `eduroam`.
+The file `scripts/gist-ip-post.py` can be used to automatically post the IP address of Raspberry PI to a specified Github Gist, specifying the IP address used to SSH into the Pi when it is connected to `eduroam`.
 
 ### Ad-hoc network
 
