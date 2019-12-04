@@ -17,3 +17,4 @@ printf getdist | socat - tcp:192.168.99.<group number>
 | `getmotors`   | Return the current control values used on the motors    |
 | `start`       | Start wall following behavior                           |
 | `stop`        | Stop the robot                                          |
+| `test`        | Set the robot in test mode, testing F/L/R motion.       |
